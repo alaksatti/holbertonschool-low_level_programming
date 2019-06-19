@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <stdio.h>
 /**
  *main - prints a line with new line to std error.
  *Description: prints and that piece of art is useful" by Dora Korpar.
