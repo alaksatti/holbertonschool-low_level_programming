@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -E $CPATH > c
+gcc -E *.c $CPATH > c
