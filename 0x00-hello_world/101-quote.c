@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include <stdio.h>
 /**
  *main - prints a line with new line to std error.
@@ -10,7 +11,7 @@ int main(void)
 	static const char msg[] =
 		"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	fwrite(msg, sizeof(msg) - 1, 1, stderr);
+	write(2, msg, sizeof(msg)-1);
 
 	return (1);
 }
