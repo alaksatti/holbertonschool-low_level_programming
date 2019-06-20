@@ -14,6 +14,6 @@ int main(void)
 
 	while (num[i] > 0 && num[i] <= 9)
 		putchar('num[i]');
-	putchar('\n');
+	putchar ('\n');
 	return (0);
 }
