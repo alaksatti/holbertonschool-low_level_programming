@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
+#include <time.h>
 /**
  *main - Determine if last digit is within specified ranges.
  *Description: Complete source code and print if it is >5, 0, or <6 != 0.
@@ -22,5 +22,6 @@ int main(void)
 	if (n < 6 && n != 0)
 		printf("Last digit of %i is %i and is less than 6 and not 0\n",
 n, LD);
+
 	return (0);
 }
