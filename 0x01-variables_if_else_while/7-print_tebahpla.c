@@ -10,11 +10,10 @@
 
 int main(void)
 {
-	char arr[] = {'a', 'b', 'c', 'd', 'e', 'v', 'g', 'h', 'i', 'j', 'k', 'l',
-'m', 'n', 'o', 'p', 'q', 'r', 'z'};
+	char i;
 
-	strrev(arr);
-	putchar (arr);
+	for (i = 122; i >= 97; --i)
+		putchar(i);
 	putchar ('\n');
 	return (0);
 }
