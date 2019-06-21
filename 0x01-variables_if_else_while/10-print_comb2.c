@@ -16,7 +16,7 @@ int main(void)
 		putchar('0' + (i % 10));
 
 		if (((i / 10) == 9) && ((i % 10) == 9))
-			putchar(' ');
+			putchar('\n');
 		else
 		{
 			putchar(',');
