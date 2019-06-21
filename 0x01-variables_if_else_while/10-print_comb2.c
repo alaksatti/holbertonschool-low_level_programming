@@ -14,9 +14,14 @@ int main(void)
 	{
 		putchar('0' + (i / 10));
 		putchar('0' + (i % 10));
-		if ((i / 10) && (i % 10) != 9)
-		putchar(',');
-		putchar(' ');
+
+		if (((i / 10) == 9) && ((i % 10) == 9))
+			putchar(' ');
+		else
+		{
+			putchar(',');
+			putchar(' ');
+		}
 
 			}
 return (0);
