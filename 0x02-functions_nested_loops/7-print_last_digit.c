@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
 *print_last_digit- prints the last digit of a number.
 * Description: Print the last digit of a number.
@@ -9,35 +9,13 @@
 
 int print_last_digit(int r)
 {
-	if (r < 0)
-		r = -r;
+	int LD;
 
-	if (r >= 1000)
-	{
-		printf("%i", r % 1000);
-		return((r % 1000));
-	}
+	LD = r % 10;
 
-	if (r >= 100 && r < 1000)
-	{
-		printf("%i", r % 100);
-		return ((r % 100));
-	}
+	if (LD < 0)
+		LD = (-LD);
 
-	if (r >= 10 && r < 100)
-	{
-		printf("%i", r % 10);
-		return ((r % 10));
-	}
+	return (LD);
 
-	if (r >= 0 && r < 10)
-	{
-		printf("%i", r);
-		return (r);
-	}
-	else
-	{
-		printf("%i", r);
-		return(r);
-	}
 }
