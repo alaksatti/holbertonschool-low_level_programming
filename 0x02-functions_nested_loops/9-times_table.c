@@ -17,29 +17,29 @@ void times_table(void)
 			p = ((i * j));
 			if (p <= 9 && j != 9)
 			{
-				putchar(' ');
-				putchar(p + '0');
-				putchar(',');
-				putchar(' ');
+				_putchar(' ');
+				_putchar(p + '0');
+				_putchar(',');
+				_putchar(' ');
 			}
 			if (p > 9 && j != 9)
 			{
-				putchar((p / 10) + '0');
-				putchar((p % 10) + '0');
-				putchar(',');
-				putchar(' ');
+				_putchar((p / 10) + '0');
+				_putchar((p % 10) + '0');
+				_putchar(',');
+				_putchar(' ');
 			}
 			if (p > 9 && j == 9)
 			{
-				putchar((p / 10) + '0');
-				putchar((p % 10) + '0');
+				_putchar((p / 10) + '0');
+				_putchar((p % 10) + '0');
 			}
 			if (p <= 9 && j == 9)
 			{
-				putchar(' ');
-				putchar(p + '0');
+				_putchar(' ');
+				_putchar(p + '0');
 			}
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
