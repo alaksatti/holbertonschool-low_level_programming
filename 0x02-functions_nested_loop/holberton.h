@@ -14,4 +14,4 @@ void times_table(void);
 int add(int, int);
 void print_to_98(int n);
 
-#endif _HOLBERTON_H_
+#endif
