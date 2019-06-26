@@ -2,7 +2,7 @@
 
 
 /**
- * _abs(int r) - Compute the absolute value of an integer.
+ * _abs - Compute the absolute value of an integer.
  * Description: Compute the absolute value of n.
  *@r: int to be checked.
  * Return: the absolute value.
