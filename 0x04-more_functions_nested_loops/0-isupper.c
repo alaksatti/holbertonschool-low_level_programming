@@ -1,4 +1,4 @@
-#include "holberton.H"
+#include "holberton.h"
 
 /**
  * _isupper- print alphabet in lowercase w/new line.
@@ -9,7 +9,7 @@
 int _isupper(int c)
 {
 
-	if (c >= 65 && c <= 90)
+	if (c >= 'A' && c <= 'Z')
 		return (1);
 	else
 		return (0);
