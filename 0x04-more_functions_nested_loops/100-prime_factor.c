@@ -11,11 +11,11 @@
 
 int main(void)
 {
-	int largest = 0, i;
+	unsigned int largest = 0, i;
 
-	for (i = 1; i <= 1231952; i++)
-		if (1231952 % i == 0 && i % 2 != 0)
+	for (i = 1; i <= 612852475143; i++)
+		if (612852475143 % i == 0 && i % 2 != 0)
 			largest = i;
-	printf("%i\n", largest);
+	printf("%u\n", largest);
 	return (0);
 }
