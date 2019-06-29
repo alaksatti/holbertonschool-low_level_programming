@@ -16,6 +16,6 @@ int main(void)
 	for (i = 1; i <= 1231952; i++)
 		if (1231952 % i == 0 && i % 2 != 0)
 			largest = i;
-	printf("%i", largest);
+	printf("%i\n", largest);
 	return (0);
 }
