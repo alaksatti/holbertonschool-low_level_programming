@@ -21,7 +21,7 @@ void print_number(int n)
 
 	else if (n == 0)
 	{
-	        _putchar('0');
+		_putchar('0');
 		return;
 	}
 	else
@@ -30,7 +30,7 @@ void print_number(int n)
 	if (m > 0)
 	{
 		r = m % 10;
-		if ( m / 10 > 0)
+		if (m / 10 > 0)
 			print_number(m / 10);
 		_putchar(r + '0');
 	}
