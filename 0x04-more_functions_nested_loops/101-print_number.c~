@@ -1,0 +1,33 @@
+#include "holberton.h"
+
+/**
+ * print_number - prints integers.
+ * @n: number to be checked
+ * Return: nothing
+ */
+
+
+void print_number(int n)
+{
+	int r, rev, sum = 0;
+
+	if (n < 0)
+	{
+		_putchar('-');
+		n = -n;
+	}
+
+	if( n == 0)
+		_putchar('0');
+
+	if(n > 0)
+
+		while (n > 0)
+		{
+			r = n % 10;
+			sum = sum * 10 +  r;
+			n = n / 10;
+			rev = sum / 10;
+			_putchar(rev % 10 + '0');
+		}
+}
