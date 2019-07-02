@@ -10,19 +10,16 @@
 
 void puts_half(char *str)
 {
-	int i, count = 0, secondhalf;
+	int i, count = 0;
 
 	for (i = 0; str[i] != '\0'; i++)
 		count++;
 
-
-	secondhalf = (count / 2);
-
 	if (count % 2  == 0)
-		for (i = secondhalf; i <= count; ++i)
-			_putchar(str[i]);
-	else
-		for (i = secondhalf + 1; i <= count; ++i)
+		for (i = (count) / 2; i <= count; ++i)
+			     _putchar(str[i]);
+     	else
+		for (i = ((count + 1) / 2); i <= count; ++i)
 			_putchar(str[i]);
 	_putchar('\n');
 }

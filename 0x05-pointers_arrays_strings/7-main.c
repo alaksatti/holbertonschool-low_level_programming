@@ -7,9 +7,15 @@
  */
 int main(void)
 {
-	char *str;
+	char *str, *lo, *rem, *less;
 
-	str = "123456789";
+	str = "Hello";
 	puts_half(str);
+	less = "0123456789";
+	puts_half(less);
+	rem = "123456789";
+	puts_half(rem);
+	lo = "bell";
+	puts_half(lo);
 	return (0);
 }
