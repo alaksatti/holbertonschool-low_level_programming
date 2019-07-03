@@ -4,7 +4,7 @@
 /**
  * print_array - prints n elements of an array of integers.
  * @a: array to be evaluated.
- * @n: is the number og elements in the array to be printed.
+ * @n: is the number of elements in the array to be printed.
  * Return: nothing.
  */
 
@@ -17,5 +17,5 @@ void print_array(int *a, int n)
 		if (a[i] != '\0')
 			printf("%i, ", a[i]);
 
-	printf("%i\n", a[n - 1]);
+	printf("%i \n", a[n - 1]);
 }
