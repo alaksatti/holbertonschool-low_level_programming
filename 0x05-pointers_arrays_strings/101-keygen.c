@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- *main - generates random passwords for crackme.
- *101-crackme
- *Return: Passwords.
+ * main - generates random passwords for crackme.
+ * 101-crackme
+ * Return: Passwords.
  */
 
 
