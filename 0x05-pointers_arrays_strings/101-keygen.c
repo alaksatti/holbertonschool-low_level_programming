@@ -1,6 +1,6 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 
 /**
  *main - generates random passwords for crackme.
@@ -15,5 +15,4 @@ int main(void)
 	printf("%d", rand());
 
 	return (0);
-
 }
