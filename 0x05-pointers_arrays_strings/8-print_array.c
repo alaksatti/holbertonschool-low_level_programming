@@ -16,6 +16,6 @@ void print_array(int *a, int n)
 	for (i = 0; i < (n - 1); i++)
 		printf("%i, ", *(a + i));
 
-	printf("%i", *(a + (n-1)));
-	printf("\n");
+	printf("%i", *(a + (n - 1)));
+	putchar('\n');
 }
