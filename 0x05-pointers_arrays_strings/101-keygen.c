@@ -12,7 +12,7 @@ int main (void)
 {
 
 	srand(time(NULL));
-	printf("%i", rand);
+	printf("%i", rand());
 
 	return (0);
 
