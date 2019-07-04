@@ -12,7 +12,7 @@
 
 int _atoi(char *s)
 {
-	int i, numfound = 0, negcounter = 0, finalint = 0;
+	unsigned int i, numfound = 0, negcounter = 0, finalint = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
