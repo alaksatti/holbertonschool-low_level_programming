@@ -22,13 +22,10 @@ int _atoi(char *s)
 		else if (s[i] >= '0' && s[i] <= '9')
 		{
 			finalint = finalint * 10 + (s[i] - '0');
-			if (negcounter % 2 != 0 && (INT_MIN - finalint == 0))
-				return(INT_MIN);
 			numfound = 1;
 		}
-		else
-			if (numfound == 1)
-				return (finalint);
+		else if (numfound == 1)
+			break;
 	}
 
 	if (negcounter % 2 == 0)
