@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <limits.h>
 
 
 /**
@@ -31,6 +32,11 @@ int _atoi(char *s)
 	else if (negcounter % 2 != 0)
 		return (-finalint);
 
-	else if (finalin == 0)
+	else if (finalint >= INT_MAX)
+		return (INT_MAX);
+	else if (finalint <= INT_MIN)
+		return (INT_MAX);
+
+	else
 		return (0);
 }
