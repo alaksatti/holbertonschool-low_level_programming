@@ -22,6 +22,10 @@ int _atoi(char *s)
 		else if (s[i] >= '0' && s[i] <= '9')
 		{
 			finalint = finalint * 10 + (s[i] - '0');
+			if (finalint >= INT_MAX)
+				return (INT_MAX);
+			if (finalint <= INT_MIN)
+				return (INT_MIN);
 		}
 	}
 
@@ -31,12 +35,6 @@ int _atoi(char *s)
 
 	else if (negcounter % 2 != 0)
 		return (-finalint);
-
-	else if (finalint >= INT_MAX)
-		return (INT_MAX);
-	else if (finalint <= INT_MIN)
-		return (INT_MAX);
-
 	else
 		return (0);
 }
