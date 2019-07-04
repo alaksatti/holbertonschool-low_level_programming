@@ -31,6 +31,6 @@ int _atoi(char *s)
 	else if (negcounter % 2 != 0)
 		return (-finalint);
 
-	else
+	else if (finalin == 0)
 		return (0);
 }
