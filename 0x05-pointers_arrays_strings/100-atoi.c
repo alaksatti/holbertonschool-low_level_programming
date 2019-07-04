@@ -17,15 +17,18 @@ int _atoi(char *s)
 	{
 		if (s[i] == '-')
 			negcounter++;
-		while (s[i] >= 0 && s[i] <= 9)
-			finalint *= 10 + s[i];
+
+		else if (s[i] >= '0' && s[i] <= '9')
+		{
+			finalint = finalint * 10 + (s[i] - '0');
+		}
 	}
 
 
-	if (negcounter % 2 == 0 && finalint > 0)
+	if (negcounter % 2 == 0)
 		return (finalint);
 
-	else if (negcounter % 2 != 0 && finalint > 0)
+	else if (negcounter % 2 != 0)
 		return (-finalint);
 
 	else
