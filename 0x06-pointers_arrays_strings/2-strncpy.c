@@ -2,8 +2,9 @@
 
 /**
  * _strncpy - copies a string.
- * @dest - buffer to which string will be copied into.
- * @src - string to be copied.
+ * @dest: buffer to which string will be copied into.
+ * @src: string to be copied.
+ * @n: Number of characters to copy.
  * Return: pointer to dest.
  */
 
