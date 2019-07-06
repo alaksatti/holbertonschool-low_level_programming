@@ -1,27 +1,29 @@
 #include "holberton.h"
 
+
 /**
- * _strcmp - compares two string.
- * @s1: first string to be compared.
- * @s2: second string to be compared.
- * Return: comparison.
+ * _strcmp - compares two strings.
+ * @s1: first string to be evaluated.
+ * @s2: Second string to be evaluated.
+ * Return: Comparison.
  */
+
+
 
 int _strcmp(char *s1, char *s2)
 {
 	int i = 0;
 
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+	while (s1[i] != '\0' && s2[i] != '\0')
+	{
+		if (s1[i] - s2[i] != 0)
+			break;
 		++i;
+	}
 
 
-		if (sl[i] == s2[i])
-			return (0);
 
-		else if (s1 > s2)
-			return (s1 - s2);
-		else
-			return (s2 - s1);
 
+	return (s1[i] - s2[i]);
 
 }
