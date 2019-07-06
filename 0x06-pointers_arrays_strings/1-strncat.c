@@ -3,9 +3,10 @@
 
 /**
  *_strncat - concatenates two strings up to a certain number of bytes.
- * @dest - the string that will be appended.
- * @src - the string that will be concatenated to dest.
- * Resturn: pointer to dest.
+ * @dest:the string that will be appended.
+ * @src: the string that will be concatenated to dest.
+ * @n: number of bytes.
+ * Return: pointer to dest.
  */
 
 
