@@ -8,8 +8,8 @@
 
 char *leet(char *s)
 {
-	char lett [] = "AEOTLaeotl";
-	char num [] = "4307143071";
+	char lett[] = "AEOTLaeotl";
+	char num[] = "4307143071";
 	int i, j;
 
 	for (i = 0; s[i] != '\0'; i++)
