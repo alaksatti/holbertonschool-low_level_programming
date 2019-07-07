@@ -3,14 +3,14 @@
 
 /**
  * print_number - prints an integer.
- * @n - integer to be printed.
+ * @n:  integer to be printed.
  * Return: nothing.
  */
 
 
 void print_number(int n)
 {
-	unsigned m;
+	unsigned int m;
 
 	if (n < 0)
 	{
