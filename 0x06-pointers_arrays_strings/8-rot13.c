@@ -1,26 +1,25 @@
 #include "holberton.h"
 
 /**
- *rot13 - Encodes a string using rot13.
- *@s: string to be encoded.
- *Return:pointer to string.
+ * rot13 - Encodes a string using rot13.
+ * @s: string to be encoded.
+ * Return: Pointer to string.
  */
-
-
 
 char *rot13(char *s)
 {
-	char orderedlet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwx\
-yz";
-
-	char revorderedlet[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefgh\
-ijklm";
 	int i, j;
+	char let[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char inv[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (i = 0; s[i] != '\0'; ++i)
-		for (j = 0; orderedlet[j] != '\0'; ++j)
-			if (s[i] == orderedlet[j])
-				s[i] = revorderedlet[j];
+	for (i = 0; s[i] != '\0'; i++)
+		for (j = 0; let[j] != '\0'; j++)
+		{
+			if (s[i] == let[j])
+			{
+				s[i] = inv[j];
+				break;
+			}
+		}
 	return (s);
-
 }
