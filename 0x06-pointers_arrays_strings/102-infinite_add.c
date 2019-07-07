@@ -65,7 +65,14 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			}
 		if (sumin + 1 > size_r - 1)
 			return (0);
+
+
 		else
+		{
+			for (i = 0; i <= sumin; i++)
+				t[i] = t[i] + '0';
+			t[i] = '\0';
 			_strcpy(t, r);
 			return (r);
+		}
 }
