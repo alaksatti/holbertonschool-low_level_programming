@@ -41,40 +41,41 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	for (j = 0; n2[j] != '\0'; j++)
 		n2[i] = n2[i] - '0';
 
-		numin1 = i - 1;
-		numin2 = j - 1;
+	numin1 = i - 1;
+	numin2 = j - 1;
 
-		for (; numin1 >= 0 && numin2 >= 0; numin1--, numin2--, ++sumin)
+	for (; numin1 >= 0 && numin2 >= 0; numin1--, numin2--, ++sumin)
+	{
+		temp[sumin] = (n1[numin1] + n2[numin2] + leftover) % 10;
+		leftover = (n1[numin1] + n2[numin2] + leftover) / 10;
+	}
+
+	if (numin1 == numin2 && leftover > 0)
+		temp[sumin++] = leftover;
+
+	else if (numin1 > numin2)
+		while (numin1 >= 0)
 		{
-			temp[sumin] = (n1[numin1] + n2[numin2] + leftover) % 10;
-			leftover = (n1[numin1] + n2[numin2] + leftover) / 10;
+			temp[sumin++] = (n1[numin1] + leftover) % 10;
+			leftover = (n1[numin1] + leftover) / 10;
+			numin1--;
 		}
-		if (numin1 == numin2 && leftover > 0)
-			temp[sumin++] = leftover;
-
-		else if (numin1 > numin2)
-			while (numin1 >= 0)
-			{
-				temp[sumin++] = (n1[numin1] + leftover) % 10;
-				leftover = (n1[numin1] + leftover) / 10;
-				numin1--;
-			}
-
-		else if (numin2 > numin1)
-			while (numin2 >= 0)
-			{
-				temp[sumin++] = (n2[numin2] + leftover) % 10;
-				leftover = (n2[numin2] + leftover) / 10;
-				numin2--;
-			}
-
-		if (sumin + 1 > size_r - 1)
-			return (0);
-		else
+	else if (numin2 > numin1)
+		while (numin2 >= 0)
 		{
-			for (i = 0; i != '\0'; i++)
-				temp[i] = temp[i] + '0';
-			_strcpy(r, temp);
-			return (r);
+			temp[sumin++] = (n2[numin2] + leftover) % 10;
+			leftover = (n2[numin2] + leftover) / 10;
+			numin2--;
 		}
+
+
+	if (sumin + 1 > size_r - 1)
+		return (0);
+	else
+	{
+		for (i = 0; i != '\0'; i++)
+			temp[i] = temp[i] + '0';
+		_strcpy(r, temp);
+		return (r);
+	}
 }
