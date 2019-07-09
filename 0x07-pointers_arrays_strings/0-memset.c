@@ -6,6 +6,7 @@
  * @s: pointer to char array.
  * @b: value to  fill up memory space.
  * @n: number of bytes to add.
+ * Return: pointer to area of memory.
  */
 
 
