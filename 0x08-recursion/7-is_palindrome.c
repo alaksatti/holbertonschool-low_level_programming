@@ -18,6 +18,7 @@ int rev_string_check(char *s, int n)
 
 	else
 		return (0);
+	return (0);
 }
 
 
