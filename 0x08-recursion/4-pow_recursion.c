@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * Returns the value of x raised to the power y.
+ * _pow_recursion -  Returns the value of x raised to the power y.
  * @x: base.
  * @y: exponent.
  * Return: x raised to y.
