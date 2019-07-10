@@ -13,7 +13,7 @@ int rev_string_check(char *s, int n)
 		return (1);
 	if (*s == *(s + n))
 	{
-		return (rev_string_check(s++, n - 2));
+		return (rev_string_check(s + 1, n - 2));
 	}
 
 	else
