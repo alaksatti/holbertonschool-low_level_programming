@@ -3,7 +3,7 @@
 /**
  * find_sqr - circles through numbers to find the sqr of n.
  * @i: int testing.
- * @j: square searching for.
+ * @n: square searching for.
  * Return: sqrt of n.
  */
 
