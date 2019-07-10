@@ -1,8 +1,9 @@
 #include "holberton.h"
 
 /**
- * rev_string - reverses given string.
+ * rev_string_check - reverses given string.
  * @s: string passed
+ *@n: string length.
  * Return: reversed string.
  */
 
@@ -27,7 +28,7 @@ int rev_string_check(char *s, int n)
 /**
  * _strlen - finds the length of a string.
  *@s: string passed.
- * Returns: length of string.
+ * Return: length of string.
  */
 char _strlen(char *s)
 {
@@ -50,5 +51,5 @@ char _strlen(char *s)
 
 int is_palindrome(char *s)
 {
-
+	return (rev_string_check(s, _strlen(s)));
 }
