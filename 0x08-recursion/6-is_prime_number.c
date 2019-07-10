@@ -1,0 +1,36 @@
+#include "holberton.h"
+
+/**
+ * find_prime - finds factors of n.
+ * @n: number to be checked.
+ * @i: possible factor.
+ *Return:factors.
+ */
+
+
+int find_factors(int i, int n)
+{
+	if (n % i == 0 && i != n)
+		return (0);
+	else if (n % i == 0 && i == n)
+		return (1);
+	if (n % i)
+		return (find_factors(++i, n));
+	return(0);
+}
+
+/**
+ * is_prime_number - determines whether a number is prime or not.
+ * @n: number to be determined.
+ * Return: 1 if prime 0 if not.
+ */
+
+int is_prime_number(int n)
+{
+	if (n < 2)
+		return (0);
+	else
+		return (find_factors(2, n));
+
+	return (0);
+}

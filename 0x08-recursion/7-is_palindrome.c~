@@ -1,0 +1,39 @@
+#include "holberton.h"
+
+/**
+ * rev_string - reverses given string.
+ * @s: string passed
+ * Return: reversed string.
+ */
+
+char *rev_string(char *s)
+{
+	while (*s)
+		rev_string(++s);
+
+	return (s);
+}
+
+
+
+
+/**
+ * is_palindrome - checks if string is a palindrome.
+ * @s: string passed.
+ * Return: 1 if palindrome, 2 if not.
+ */
+
+int is_palindrome(char *s)
+{
+	int i;
+	*t = s;
+	char r = rev_string(s);
+
+	for (i = 0; s[i]! '\0'; ++i)
+		if (*(r + i) != (*(t + i)))
+		    return (0);
+	if ((*(r + i) == (*(t + i))))
+	    return (1);
+
+	return (0);
+}
