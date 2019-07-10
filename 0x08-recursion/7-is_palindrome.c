@@ -13,12 +13,11 @@ int rev_string_check(char *s, int n)
 		return (1);
 	if (*s == *(s + n))
 	{
-		return (rev_string_check(++s, n - 2));
+		return (rev_string_check(s++, n - 2));
 	}
 
 	else
 		return (0);
-	return (0);
 }
 
 
@@ -36,8 +35,6 @@ char _strlen(char *s)
 		return (1 + _strlen(++s));
 	else
 		return (0);
-
-	return (0);
 }
 
 
@@ -51,5 +48,5 @@ char _strlen(char *s)
 
 int is_palindrome(char *s)
 {
-	return (rev_string_check(s, _strlen(s)));
+	return (rev_string_check(s, _strlen(s - 1)));
 }
