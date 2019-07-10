@@ -48,5 +48,5 @@ char _strlen(char *s)
 
 int is_palindrome(char *s)
 {
-	return (rev_string_check(s, _strlen(s - 1)));
+	return (rev_string_check(s, _strlen(s) - 1));
 }
