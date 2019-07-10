@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * find_prime - finds factors of n.
+ * find_factors - finds factors of n.
  * @n: number to be checked.
  * @i: possible factor.
  *Return:factors.
@@ -16,7 +16,7 @@ int find_factors(int i, int n)
 		return (1);
 	if (n % i)
 		return (find_factors(++i, n));
-	return(0);
+	return (0);
 }
 
 /**
