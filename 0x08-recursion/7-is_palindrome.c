@@ -11,7 +11,7 @@
 
 int rev_string_check(char *s, int n, int start, int end)
 {
-	if (end - 1 < start)
+	if (end - 1 <= start)
 		return (1);
 	if (s[start] == s[end])
 		return (rev_string_check(s, n, start + 1, end - 1));
