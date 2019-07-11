@@ -3,26 +3,21 @@
 /**
  * rev_string_check - reverses given string.
  * @s: string passed
- *@n: string length.
+ * @n: string length.
+ * @end: end of string.
+ * @start: Beginning of string.
  * Return: reversed string.
  */
 
-int rev_string_check(char *s, int n)
+int rev_string_check(char *s, int n, int start, int end)
 {
-	if (n - 1 < 0)
+	if (end - 1 < start)
 		return (1);
-	if (*s == *(s + n))
-	{
-		return (rev_string_check(s + 1, n - 2));
-	}
-
+	if (s[start] == s[end])
+		return (rev_string_check(s, n, start + 1, end - 1));
 	else
 		return (0);
-	return (0);
 }
-
-
-
 
 
 /**
@@ -49,5 +44,6 @@ char _strlen(char *s)
 
 int is_palindrome(char *s)
 {
-	return (rev_string_check(s, _strlen(s) - 1));
+	return (rev_string_check(s, _strlen(s) - 1, 0, _strlen(s) - 1));
+
 }

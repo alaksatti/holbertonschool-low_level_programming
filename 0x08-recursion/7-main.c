@@ -10,9 +10,9 @@ int main(void)
 {
 	int r;
 
-	r = is_palindrome("level");
+	r = is_palindrome("");
 	printf("%d\n", r);
-	r = is_palindrome("redder");
+	r = is_palindrome("\0");
 	printf("%d\n", r);
 	r = is_palindrome("holberton");
 	printf("%d\n", r);
