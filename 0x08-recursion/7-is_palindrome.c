@@ -12,9 +12,13 @@
 int rev_string_check(char *s, int n, int start, int end)
 {
 	if (start >= end)
+	{
 		return (1);
+	}
 	if (s[start] != s[end])
+	{
 		return (0);
+	}
 	else
 		return (rev_string_check(s, n, start + 1, end - 1));
 
@@ -26,7 +30,7 @@ int rev_string_check(char *s, int n, int start, int end)
  *@s: string passed.
  * Return: length of string.
  */
-char _strlen(char *s)
+int _strlen(char *s)
 {
 	if (s[0])
 		return (1 + _strlen(s + 1));
@@ -45,6 +49,9 @@ char _strlen(char *s)
 
 int is_palindrome(char *s)
 {
-	return (rev_string_check(s, _strlen(s) - 1, 0, _strlen(s) - 1));
+	if (s[0] == '\0')
+		return (1);
+
+	return (rev_string_check(s, _strlen(s), 0, _strlen(s) - 1));
 
 }
