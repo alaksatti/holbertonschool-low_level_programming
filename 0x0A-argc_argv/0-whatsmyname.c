@@ -3,6 +3,8 @@
 
 /**
  * main - prints name of program followed by new line.
+ * @argc: void.
+ * @argv[]: vector array of strings passed to the program.
  * Return: 0 when completed successfuly.
  */
 
