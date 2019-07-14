@@ -1,0 +1,15 @@
+#include "holberton.h"
+#include <stdio.h>
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+        char *n = "1";
+        char *m = "1";
+	infinite_add(n, m);        
+        return (0);
+}
