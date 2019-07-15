@@ -17,7 +17,7 @@ int checkifdigit(char *num)
 
 	for (i = 0; num[i] != '\0'; i++)
 		if (!isdigit(num[i]))
-		    return (0);
+			return (0);
 	return (1);
 }
 
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 			printf("Error\n");
 			return (1);
 		}
-		else if (argc != 1 && checkifdigit(argv[i]) == 1)
+		else if (checkifdigit(argv[i]) == 1)
 			sum += atoi(argv[i]);
 	}
 	printf("%i\n", sum);
