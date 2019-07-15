@@ -9,32 +9,25 @@
 
 int main(void)
 {
-	int i, j, x, y;
+	int i, j;
 
-	for (i = 0; i <= 9; ++i){
-		for (j = 0; j <= 9; ++j)
+	for (i = 0; i <= 98; ++i)
+		for (j = 1; j <= 99; ++j)
 		{
-			putchar('0' + i);
-			putchar('0' + j);
-			putchar(' ');
-
-	for (x = 0; x <= 9; ++x)
-	{
-		for (y = 0; y <= 9; ++y)
-		{
-			putchar('0' + x);
-			putchar('0' + y);
-			if ((x == 9) && (y == 9))
-				putchar('\n');
-			else
+			if (i < j)
 			{
-				putchar(',');
+				putchar(i / 10 + '0');
+				putchar(i % 10 + '0');
 				putchar(' ');
+				putchar(j / 10 + '0');
+				putchar(j % 10 + '0');
+				if (!(i == 98 && j == 99))
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
-	}
-	}
-	}
-
+	putchar ('\n');
 	return (0);
 }
