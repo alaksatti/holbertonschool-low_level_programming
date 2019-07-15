@@ -30,11 +30,11 @@ int checkifdigit(char *num)
 
 int main(int argc, char *argv[])
 {
-	int i, sum = 0;
+	int i;
+	unsigned int sum = 0;
 
 	for (i = 1; i < argc; ++i)
 	{
-		checkifdigit(argv[i]);
 
 		if (checkifdigit(argv[i]) == 0)
 		{
