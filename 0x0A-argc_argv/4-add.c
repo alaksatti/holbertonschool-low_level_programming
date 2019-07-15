@@ -30,7 +30,7 @@ int checkifdigit(char *num)
 
 int main(int argc, char *argv[])
 {
-	unsigned i, sum = 0;
+	unsigned int i, sum = 0;
 
 	for (i = 1; i < argc; ++i)
 	{
