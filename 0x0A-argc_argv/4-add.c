@@ -30,7 +30,7 @@ int checkifdigit(char *num)
 
 int main(int argc, char *argv[])
 {
-	unsigned int i, sum = 0;
+	int i, sum = 0;
 
 	for (i = 1; i < argc; ++i)
 	{
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 			printf("Error\n");
 			return (1);
 		}
-		else if (checkifdigit(argv[i]) == 1)
+		else
 			sum += atoi(argv[i]);
 	}
 	printf("%i\n", sum);
