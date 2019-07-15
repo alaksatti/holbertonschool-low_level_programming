@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  *main - print 3 numbers"
@@ -16,14 +15,16 @@ int main(void)
 		for (j = '1'; j <= '8'; ++j)
 			for (k = '2'; k <= '9'; ++k)
 			{
-				putchar(i);
-				putchar(j);
-				putchar(k);
-
-				if (!(i == '7' && j == '8' && k == '9'))
+				if (i < j && j < k)
 				{
-					putchar(',');
-					putchar(' ');
+					putchar(i);
+					putchar(j);
+					putchar(k);
+					if (!(i == '7' && j == '8' && k == '9'))
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
 			}
 	putchar ('\n');
