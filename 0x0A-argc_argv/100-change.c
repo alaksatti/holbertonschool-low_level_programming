@@ -10,7 +10,7 @@
  */
 
 
-int coins(int cents, int count)
+void coins(int cents, int count)
 {
 
 	printf("%i\n", count);
@@ -32,7 +32,6 @@ int coins(int cents, int count)
 
 	else if (cents == 0)
 		printf("%i\n", count);
-	return (0);
 }
 
 
@@ -65,7 +64,6 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-
 
 	coins(cents, 0);
 	return (0);
