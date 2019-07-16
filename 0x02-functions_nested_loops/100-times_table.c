@@ -1,51 +1,54 @@
 #include "holberton.h"
 
+
 /**
- * print_times_table - prints time table of any number between 0 and 15.
- * Return: nothing
+ * print_times_table - prints the times table of value n up to 15.
+ * @n: value of times table.
+ * Return: 0 upon successful completion.
  */
+
 
 void print_times_table(int n)
 {
-	int p, i, j;
+	int i, j, p;
 
-	if (n >= 0 && n <= 15)
+	if (n > 15 || n < 0)
+		return;
+	else
 		for (i = 0; i <= n; ++i)
-		{
-			_putchar('0');
 			for (j = 0; j <= n; ++j)
 			{
 				p = i * j;
-				_putchar(',');
-				_putchar(' ');
 
-				if (p < 10)
+				if (j == 0)
 				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(p + '0');
-					_putchar(',');
+					_putchar('0');
 				}
-				else if (p >= 10)
+
+				else if (p > 9 && p < 100)
 				{
-					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
 					_putchar(p / 10 + '0');
 					_putchar(p % 10 + '0');
-					_putchar(',');
+				}
+				else if (p >= 100)
+				{
+					_putchar(' ');
+					_putchar(p / 100 + '0');
+					_putchar((p / 10) % 10 + '0');
+					_putchar(p % 10 + '0');
 				}
 				else
 				{
-					_putchar(',');
 					_putchar(' ');
-					_putchar(p / 100 + '0');
-					_putchar((p / 100) % 10 + '0');
-					_putchar(p % 10 + '0');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(p + '0');
 				}
+				if (!(j == n))
+					_putchar(',');
+				else
+					_putchar('\n');
 			}
-		}
-	else
-		return;
 }
