@@ -14,16 +14,12 @@ void print_times_table(int n)
 
 	if (n > 15 || n < 0)
 		return;
-	else
-		for (i = 0; i <= n; ++i)
-			for (j = 0; j <= n; ++j)
+	for (i = 0; i <= n; ++i)
+		for (j = 0; j <= n; ++j)
 			{
 				p = i * j;
-
 				if (j == 0)
-				{
 					_putchar('0');
-				}
 
 				else if (p > 9 && p < 100)
 				{
