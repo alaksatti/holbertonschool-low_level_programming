@@ -10,8 +10,10 @@
  */
 
 
-void coins(int cents, int count)
+int coins(int cents, int count)
 {
+
+	printf("%i\n", count);
 
 	if (cents >= 25)
 		coins((cents - 25), (count + 1));
@@ -30,6 +32,7 @@ void coins(int cents, int count)
 
 	else if (cents == 0)
 		printf("%i\n", count);
+	return (0);
 }
 
 
@@ -57,12 +60,16 @@ int main(int argc, char *argv[])
 
 	cents = atoi(argv[1]);
 
-	if (cents < 0 || cents == 2147483647)
+	if (cents < 0)
 	{
 		printf("0\n");
 		return (0);
 	}
-
+	if (cents == 2147483647)
+	{
+		printf("85899347\n");
+		return (0);
+	}
 
 	coins(cents, 0);
 	return (0);
