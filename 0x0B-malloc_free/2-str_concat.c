@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "holberton.h"
 
 /**
  * str_concat - concatenates s1 and s2.
@@ -37,5 +38,8 @@ char *str_concat(char *s1, char *s2)
 		}
 		arr[i] = '\0';
 	}
+	else
+		return (NULL);
+
 	return (arr);
 }
