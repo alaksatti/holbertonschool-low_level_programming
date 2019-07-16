@@ -59,6 +59,11 @@ int main(int argc, char *argv[])
 
 	if (cents < 0)
 		printf("0\n");
+	if (cents >= 2147483647)
+	{
+		printf("Error\n");
+		return (1);
+	}
 
 	coins(cents, 0);
 	return (0);
