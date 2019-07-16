@@ -17,7 +17,7 @@ int main(void)
 	for (i = 2; i < 50; ++i)
 		fib[i] = (fib[i - 2] + fib[i - 1]);
 
-	for (i = 1; i < 49; ++i)
+	for (i = 0; i < 49; ++i)
 		printf("%li, ", fib[i]);
 
 	printf("%li\n", fib[49]);
