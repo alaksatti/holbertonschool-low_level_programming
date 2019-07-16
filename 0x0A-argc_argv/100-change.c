@@ -12,9 +12,18 @@
 
 void coins(int cents, int count)
 {
+	int i = 0;
 
 	if (cents >= 25)
-		coins((cents - 25), (count + 1));
+	{
+		while (cents >= 25)
+		{
+			cents -=  25;
+			++i;
+		}
+
+		coins(cents, count + i);
+	}
 
 	else if (cents < 25 && cents >= 10)
 		coins((cents - 10), (count + 1));
@@ -62,9 +71,6 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-
-	if (cents == 2147483647)
-		printf("85899348");
 
 	coins(cents, 0);
 	return (0);
