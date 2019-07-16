@@ -13,8 +13,6 @@
 void coins(int cents, int count)
 {
 
-	printf("%i\n", count);
-
 	if (cents >= 25)
 		coins((cents - 25), (count + 1));
 
