@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+
+/**
+ * main - prints first 50 fib numbers.
+ * Return: 0.
+ */
+
+int main(void)
+{
+	long int fib[50], i;
+
+	fib[0] = 1;
+	fib[1] = 1;
+	fib[2] = 2;
+
+	for (i = 3; i <= 50; ++i)
+		fib[i] = (fib[i - 2] + fib[i - 1]);
+	for (i = 1; i <= 49; ++i)
+		printf("%l, ", fib[i]);
+	printf("%l\n", fib[50]);
+
+	return (0);
+}
