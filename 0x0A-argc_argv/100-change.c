@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 	}
 
 	if (cents == 2147483647)
-		printf("85899347");
+		printf("85899348");
 
 	coins(cents, 0);
 	return (0);
