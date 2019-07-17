@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 
@@ -12,9 +11,10 @@
 
 void free_grid(int **grid, int height)
 {
+	int i;
 
-	for (; height >= 0; --height)
-		free(*(grid + height));
+	for (i = 0; i < height; ++i)
+		free(grid[i]);
 
 	free(grid);
 
