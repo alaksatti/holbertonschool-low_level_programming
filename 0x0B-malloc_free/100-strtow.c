@@ -79,7 +79,7 @@ char **strtow(char *str)
 
 	wc = wordcount(str);
 	if (wc == 0)
-		return NULL;
+		return (NULL);
 
 	arr = (char **)malloc(sizeof(char *) * (wc + 1));
 
