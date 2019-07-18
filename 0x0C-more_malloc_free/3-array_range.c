@@ -24,7 +24,7 @@ int *array_range(int min, int max)
 	size = max - min;
 
 
-	arr = (int *)malloc(sizeof(int) * size);
+	arr = (int *)malloc(sizeof(int) * size + sizeof(int));
 
 	if (arr)
 	{
