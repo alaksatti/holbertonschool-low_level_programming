@@ -51,6 +51,9 @@ char *eachword(char *s)
 
 	w = (char *)malloc(sizeof(char) * i + 1);
 
+	if (w == 0)
+		return (NULL);
+
 	if (w)
 	{
 		for (i = 0; s[i] != '\0'; ++i)
@@ -94,7 +97,7 @@ char **strtow(char *str)
 	{
 		if (str[i] != ' ' && l == 0)
 		{
-			arr[wc] = eachword(str[i]);
+			*(arr + wc) = eachword((str + i));
 			if (arr[wc] == 0)
 			{
 				for (i = 0; i <= wc; ++i)
