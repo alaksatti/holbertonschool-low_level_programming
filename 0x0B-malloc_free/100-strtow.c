@@ -74,11 +74,12 @@ char **strtow(char *str)
 	char **arr;
 	int i, l = 0, wc;
 
-	if (str == '\0' || str == NULL)
+	if (str == NULL)
 		return (NULL);
 
 	wc = wordcount(str);
-
+	if (wc == 0)
+		return NULL;
 
 	arr = (char **)malloc(sizeof(char *) * (wc + 1));
 
