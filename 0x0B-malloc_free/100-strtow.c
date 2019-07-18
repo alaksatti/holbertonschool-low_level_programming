@@ -71,7 +71,7 @@ char *eachword(char *s)
 char **strtow(char *str)
 {
 	char **arr;
-	int i, j, l = 0, wc;
+	int i, l = 0, wc;
 
 	if (str == '\0' || str == NULL)
 		return (NULL);
@@ -95,7 +95,7 @@ char **strtow(char *str)
 		if (str[i] != ' ' && l == 0)
 		{
 			arr[wc] = eachword(str[i]);
-			if (arr[wc])
+			if (arr[wc] == 0)
 			{
 				for (i = 0; i <= wc; ++i)
 					free(arr[wc]);
