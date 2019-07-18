@@ -19,10 +19,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 
 	if (s1 == NULL)
-		sl = "";
+		sl = '';
 
 	if (s2 == NULL)
-		s2 = "";
+		s2 = '';
 
 	for (i = 0; s1[i] != '\0'; ++i)
 		;
