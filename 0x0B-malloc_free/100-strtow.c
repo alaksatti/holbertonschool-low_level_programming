@@ -81,12 +81,14 @@ char **strtow(char *str)
 
 	wc = wordcount(str);
 
+	printf("%i\n", wc);
+
 	arr = (char **)malloc(sizeof(char) * (wc + 1));
 
 	if (arr)
 	{
-		for (i = 0; i < wc; ++i)
-			arr[i] = '\0';
+		for (i = 0; i <= wc; ++i)
+			arr[i] = NULL;
 	}
 
 	wc = 0;
