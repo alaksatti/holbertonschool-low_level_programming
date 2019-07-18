@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 int wordcount(char *s);
 char *eachword(char *s);
@@ -88,7 +87,7 @@ char **strtow(char *str)
 
 	if (arr)
 	{
-		for (i = 0; i <= wc; ++i)
+		for (i = 0; i < wc; ++i)
 			arr[i] = '\0';
 	}
 
