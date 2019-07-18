@@ -84,7 +84,7 @@ char **strtow(char *str)
 
 	printf("%i\n", wc);
 
-	arr = (char **)malloc(sizeof(char) * (wc + 1));
+	arr = (char **)malloc(sizeof(char*) * (wc + 1));
 
 	if (arr)
 	{
