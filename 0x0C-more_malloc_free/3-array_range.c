@@ -14,7 +14,7 @@
 int *array_range(int min, int max)
 {
 	int *arr;
-	int i, size, j;
+	unsigned int i, size, j;
 
 
 
