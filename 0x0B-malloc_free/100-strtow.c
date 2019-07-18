@@ -46,20 +46,18 @@ char *eachword(char *s)
 	int i;
 
 
-	for (i = 0; s[i] != '\0' && s[i] != ' '; ++i)
+	for( i = 0; s[i] != '\0' && s[i] != ' '; ++i)
 		;
 
-	w = (char *)malloc(sizeof(char) * i + 1);
-
-	if (w == 0)
-		return (NULL);
+	w = (char *)malloc(sizeof(char) * (i + 1));
 
 	if (w)
 	{
-		for (i = 0; s[i] != '\0'; ++i)
+		for (i = 0; s[i] != '\0' && s[i] != ' '; ++i)
 			w[i] = s[i];
 		w[i] = '\0';
 	}
+
 	return (w);
 }
 
@@ -86,8 +84,8 @@ char **strtow(char *str)
 
 	if (arr)
 	{
-		for (i = 0; i < wc; ++i)
-			arr[i] = '\0';
+		for (i = 0; i <= wc; ++i)
+			arr[i] = NULL;
 	}
 
 	wc = 0;
@@ -99,9 +97,10 @@ char **strtow(char *str)
 		if (str[i] != ' ' && l == 0)
 		{
 			*(arr + wc) = eachword((str + i));
+
 			if (arr[wc] == 0)
 			{
-				for (i = 0; i <= wc; ++i)
+				for (i = 0; i < wc; ++i)
 					free(arr[wc]);
 				free(arr);
 				return (NULL);
