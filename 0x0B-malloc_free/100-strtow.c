@@ -81,7 +81,6 @@ char **strtow(char *str)
 
 	wc = wordcount(str);
 
-	printf("%i\n", wc);
 
 	arr = (char **)malloc(sizeof(char*) * (wc + 1));
 
