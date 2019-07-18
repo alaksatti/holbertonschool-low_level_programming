@@ -46,7 +46,7 @@ char *eachword(char *s)
 	int i;
 
 
-	for( i = 0; s[i] != '\0' && s[i] != ' '; ++i)
+	for (i = 0; s[i] != '\0' && s[i] != ' '; ++i)
 		;
 
 	w = (char *)malloc(sizeof(char) * (i + 1));
@@ -80,7 +80,7 @@ char **strtow(char *str)
 	wc = wordcount(str);
 
 
-	arr = (char **)malloc(sizeof(char*) * (wc + 1));
+	arr = (char **)malloc(sizeof(char *) * (wc + 1));
 
 	if (arr)
 	{
@@ -100,7 +100,7 @@ char **strtow(char *str)
 
 			if (arr[wc] == 0)
 			{
-				for (i = 0; i < wc; ++i)
+				for (i = 0; i <= wc; ++i)
 					free(arr[wc]);
 				free(arr);
 				return (NULL);
