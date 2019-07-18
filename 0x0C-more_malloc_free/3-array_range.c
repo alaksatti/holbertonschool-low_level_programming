@@ -13,7 +13,7 @@
 
 int *array_range(int min, int max)
 {
-	int *arr, v;
+	int *arr, v = min;
 	unsigned int i, size = 0;
 
 
@@ -28,7 +28,7 @@ int *array_range(int min, int max)
 
 	if (arr)
 	{
-		for (i = 0; i < size; ++i, v++)
+		for (i = 0; i <= size; ++i, v++)
 			arr[i] = v;
 
 	}
