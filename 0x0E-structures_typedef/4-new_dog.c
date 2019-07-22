@@ -55,13 +55,13 @@ dog_t *new_dog(char *name, float age, char *owner)
  */
 char *storecpy(char *s)
 {
-
+	unsigned int i;
 	char *ptr;
 
 	if (!s)
 		return (NULL);
 
-	for (i = 0; s[i] != '\0', i++)
+	for (i = 0; s[i] != '\0'; i++)
 		;
 
 	ptr = malloc(sizeof(char) * (i + 1));
