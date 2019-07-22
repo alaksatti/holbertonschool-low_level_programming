@@ -2,7 +2,7 @@
 #include "dog.h"
 
 /**
- * free-dog - frees dogs.
+ * free_dog - frees dogs.
  * @d: freeing dog.
  * Return: nothing.
  */
