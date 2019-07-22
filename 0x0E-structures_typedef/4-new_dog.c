@@ -70,6 +70,7 @@ char *storecpy(char *s)
 	{
 		for (i = 0; s[i] != '\0'; i++)
 			ptr[i] = s[i];
+		ptr[i] = '\0';
 	}
 
 	return (ptr);
