@@ -9,9 +9,9 @@
 int main(void)
 {
 
-	long int sum = 2, i;
+	long int sum = 1, i;
 
-	for (i = 3; i < 4000000; i++)
+	for (i = 2; i < 4000000; i++)
 		if ((i % 2) == 0)
 			sum += i;
 
