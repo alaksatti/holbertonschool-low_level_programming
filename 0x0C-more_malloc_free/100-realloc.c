@@ -1,7 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
 
-char *_memcpy(char *dest, char *src, unsigned int n);
 
 /**
  * _realloc - reallocates a memory block.
@@ -16,20 +15,20 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	void *nptr;
 
 	if (!ptr)
-		return (malloc(newsize));
-	if (!newsize && ptr)
+		return (malloc(new_size));
+	if (!new_size && ptr)
 	{
 		free(ptr);
 		return (NULL);
 	}
 
-	if (newsize == oldsize)
+	if (new_size == old_size)
 		return (ptr);
 
-	nptr = malloc(sizeof(char) * newsize);
+	nptr = malloc(sizeof(char) * new_size);
 
 
-	if (nptr == null)
+	if (nptr == NULL)
 	{
 		free(nptr);
 		return (NULL);
