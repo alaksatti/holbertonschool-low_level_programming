@@ -9,7 +9,7 @@
 int main(void)
 {
 
-	long int sum = 2;
+	long int sum = 2, i;
 
 	for (i = 3; i < 4000000; i++)
 		if ((i % 2) == 0)
