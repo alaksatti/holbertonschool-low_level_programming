@@ -1,6 +1,7 @@
 #include "holberton.h"
 #include <stdlib.h>
 
+char *_memcpy(char *dest, char *src, unsigned int n);
 
 /**
  * _realloc - reallocates a memory block.
@@ -12,27 +13,54 @@
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
+	void *nptr;
+
 	if (!ptr)
 		return (malloc(newsize));
-
-
-	if (new_size == old_size)
-		return (ptr);
-
-	if (newsize && !ptr)
+	if (!newsize && ptr)
 	{
 		free(ptr);
 		return (NULL);
 	}
 
+	if (newsize == oldsize)
+		return (ptr);
+
+	nptr = malloc(sizeof(char) * newsize);
 
 
+	if (nptr == null)
+	{
+		free(nptr);
+		return (NULL);
+	}
 
 
+	if (new_size > old_size)
+		_memcpy(nptr, ptr, old_size);
+	else
+		_memcpy(nptr, ptr, new_size);
 
+	free(ptr);
 
+	return (nptr);
 
+}
 
+/**
+ * _memcpy - copies n bytes from one area in memory to another.
+ * @dest: destination.
+ * @src: source.
+ * @n: number of bytes to be copied.
+ * Return: pointer to destination.
+ */
 
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int i;
 
+	for (i = 0; i < n; i++)
+		dest[i] = src[i];
+
+	return (dest);
 }
