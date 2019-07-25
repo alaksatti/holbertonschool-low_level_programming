@@ -9,11 +9,17 @@
 int main(void)
 {
 
-	long int sum = 1, i;
+	long int sum = 0, i, fib[40];
 
-	for (i = 2; i < 4000000; i++)
+	fib[0] = 1;
+	fib[1] = 2;
+
+	for (i = 2; i < 32; i++)
+	{
+		fib[i] = fib[i - 1] + fib[i - 2];
 		if ((i % 2) == 0)
-			sum += i;
+			sum += fib[i];
+	}
 
 	printf("%li\n", sum);
 	return (0);
