@@ -9,7 +9,7 @@
 int main(void)
 {
 
-	long int sum = 0, i, fib[40];
+	long int sum = 1, i, fib[40];
 
 	fib[0] = 1;
 	fib[1] = 2;
@@ -17,7 +17,7 @@ int main(void)
 	for (i = 2; i < 32; i++)
 	{
 		fib[i] = fib[i - 1] + fib[i - 2];
-		if ((i % 2) == 0)
+		if ((fib[i] % 2) == 0)
 			sum += fib[i];
 	}
 
