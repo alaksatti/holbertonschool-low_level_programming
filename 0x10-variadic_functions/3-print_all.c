@@ -18,7 +18,7 @@ void print_all(const char * const format, ...)
 
 	va_start(fmt, format);
 
-	while (format[i] && format)
+	while (format && format[i])
 	{
 		switch (format[i])
 		{
@@ -33,19 +33,15 @@ void print_all(const char * const format, ...)
 			printf("%f", (float)va_arg(fmt, double));
 			break;
 		case 's':
-			tmp = va_arg(fmt, char *);
-			if (tmp)
-			{
-				printf("%s", tmp);
-				break;
-
-			}
-			printf("(nil)");
+			tmp = va_arg(fmt, char*);
+			if (!tmp)
+				printf("(nil)");
+			printf("%s", tmp);
 			break;
 		}
 
 	if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f'
-	     || format[i] == 's') && format[i + 1] != '\0' )
+	     || format[i] == 's') && format[i + 1] != '\0')
 		printf(", ");
 	i++;
 	}
