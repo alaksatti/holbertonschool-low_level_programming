@@ -17,7 +17,7 @@
  */
 
 
-typedef struct lists_h
+typedef struct list_s
 {
 
 	char *str;
