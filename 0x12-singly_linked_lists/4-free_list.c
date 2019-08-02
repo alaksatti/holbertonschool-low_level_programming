@@ -3,7 +3,7 @@
 
 
 /**
- * frr_list - frees the linked list head.
+ * free_list - frees the linked list head.
  * @head: linked list to be freed.
  * Return: nothing.
  *
