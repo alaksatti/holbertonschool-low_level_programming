@@ -20,7 +20,6 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	{
 		node->len = 0;
-		end = *head;
 
 		if (str)
 		{
@@ -40,6 +39,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (*head)
 	{
+		end = *head;
 		while (end->next)
 			end = end ->next;
 		end->next = node;
