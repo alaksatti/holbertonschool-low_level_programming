@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void printf(void) __attribute__((constructor));
+void print(void) __attribute__((constructor));
 
 /**
  * print - prints a message before main is executed.
