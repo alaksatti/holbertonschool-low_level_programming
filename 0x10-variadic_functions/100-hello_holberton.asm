@@ -1,21 +1,16 @@
-	extern	printf
-
-	section	.data
-msg:	db	"Hello, Holberton", 0
-fmt:	db	"%s", 10, 0
+	global	main
 
 	section	.text
-
-	global	main
 main:
-	push	rbp
-
-	mov	rdi,fmt
+	mov	rax,1
+	mov	rdi,1
 	mov	rsi,msg
-	mov	rax,0
-	call	printf
+	mov	rdx,17
+	syscall
 
-	pop	rbp
+	mov	rax,60
+	xor	rdi,rdi
+	syscall
 
-	mov	rax,0
-	ret
+	section	.data
+msg:	db	"Hello, Holberton", 10
