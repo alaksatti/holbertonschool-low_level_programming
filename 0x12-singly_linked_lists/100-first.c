@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 void printf(void) __attribute__((constructor));
 
 /**
