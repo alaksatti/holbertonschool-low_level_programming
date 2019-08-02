@@ -1,8 +1,9 @@
 	extern	printf
 	SECTION .data
 
-msg:	 db "Hello, Holberton", 0
-fmt:	 db "%s", 10, 0
+holberton:
+	db "Hello, Holberton", 0
+fmt:	db "%s", 10, 0
 
 	secton .text
 
@@ -10,7 +11,7 @@ fmt:	 db "%s", 10, 0
 main:
 	push	rbp
 	mov	rdi,fmt
-	mov	rsi,msg
+	mov	rsi,holberton
 	mov	rax,0
 	call	printf
 	pop	rbp
