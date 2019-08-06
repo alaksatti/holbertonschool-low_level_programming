@@ -1,0 +1,103 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdarg.h>
+typedef struct s
+{
+	char *c;
+	char *(*sp)(va_list, char *);
+}s;
+
+int counter(int i, const char *f, s *spec)
+{
+
+	int len;
+	int j;
+
+	for (len = 0, i = i + 1; f[i] != '\0'; i++, len++ )
+	{
+		for(j = 0; j < 2; j++)
+		{
+			if(f[i] == *spec[j].c)
+			{
+				return(len);
+			}
+		}
+	}
+
+	return(-1);
+
+}
+
+
+char *f_s(va_list str, char *s)
+{
+
+	s = (va_arg(str, char *));
+
+	return(s);
+
+}
+
+
+int _printf(const char *format, ...)
+{
+	int length, i = 0, x, y, j;
+	char *str;
+	va_list args;
+
+	s spec[] = {
+		{"s", f_s}
+	};
+
+	str = malloc(sizeof(char) * 1024);
+
+	for(j = 0; j < 1024; j++)
+		str[j] = '\0';
+
+	va_start(args,format);
+
+
+	while (format[i] != '\0')
+	{
+		if(format[i] == '%')
+		{
+			length = counter(i, format,spec);
+
+			if(length == -1)
+			{
+				putchar(format[i]);
+				i++;
+			}
+
+			if(length == 0)
+			{
+				for(x = 0; x < 1; x++)
+				{
+
+					if(format[i + 1] == *spec[x].c)
+						str = spec[x].sp(args, str);
+				}
+
+				for(y = 0; str[y] != '\0'; y++)
+				{
+					putchar(str[y]);
+				}
+
+				i = i + (length + 1);
+			}
+
+		}
+		else
+			putchar(format[i]);
+		i++;
+
+	}
+
+	return(length);
+}
+
+
+
+
+
+

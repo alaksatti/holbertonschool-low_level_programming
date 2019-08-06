@@ -9,7 +9,7 @@
  */
 int main(int argc, char **argv)
 {
-	int opcode, i;
+	int byte, i;
 
 	if (argc != 2)
 	{
@@ -17,18 +17,18 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 
-	opcode = atoi(argv[1]);
+	byte = atoi(argv[1]);
 
-	if (opcode < 0)
+	if (byte < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
-	for (i = 0; i < opcode; i++)
+	for (i = 0; i < byte; i++)
 	{
 		printf("%02x", *((unsigned char *)main + i));
 
-		if (i < (opcode - 1))
+		if (i < (byte - 1))
 			putchar(' ');
 	}
 	printf("\n");
