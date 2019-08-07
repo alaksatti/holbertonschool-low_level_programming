@@ -16,10 +16,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	listint_t *nodescanner = *head, *prevnode = *head, *targetnode;
 	unsigned int idx = 0;
 
-
 	if (!*head)
 		return (-1);
-
 
 	if (index == 0)
 	{
@@ -28,8 +26,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		free(nodescanner);
 		return (1);
 	}
-
-
 	while (nodescanner && idx != index)
 	{
 		idx++;
@@ -38,8 +34,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 
 	}
-
-
 	if (idx == index)
 	{
 

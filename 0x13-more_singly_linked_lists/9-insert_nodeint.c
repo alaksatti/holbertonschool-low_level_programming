@@ -3,7 +3,9 @@
 /**
  * insert_nodeint_at_index - inserts a node at a specific position.
  * @head: pointer to beginning of list.
- * ReturnL pointer to new node.
+ * @idx: index.
+ * @n: value.
+ * Return: pointer to new node.
  */
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
