@@ -13,6 +13,9 @@ void free_listint2(listint_t **head)
 {
 	listint_t *thisnode = *head, *nextnode;
 
+	if (!*head)
+		return (NULL);
+
 	while (thisnode)
 	{
 		nextnode = thisnode->next;
