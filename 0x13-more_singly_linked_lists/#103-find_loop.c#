@@ -22,9 +22,9 @@ listint_t *find_listint_loop(listint_t *head)
 		if (stepper == skipper)
 		{
 			stepper = head;
-			while (skipper)
+			while (stepper != skipper)
 			{
-				if (stepper == skipper)
+				if (stepper && skipper)
 					return (stepper);
 				stepper = stepper->next;
 				skipper = skipper->next;

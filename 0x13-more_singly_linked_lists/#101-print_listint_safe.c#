@@ -10,35 +10,18 @@
 
 size_t print_listint_safe(const listint_t *head)
 {
-	ptrlink *list, *newnode;
+
 	size_t numnodes = 0;
-	int search;
+	listint_t *nodescanner = head;
 
 
-	while (head)
+	while (nodescanner)
 	{
 
-		search = repeat_check(list, head);
-		if (search)
-		{
 			printf("-> [%p] %d\n", (void *) head, head->n);
-			break;
-		}
 
 		printf("[%p] %i\n", (void *)head, head->n);
 
-		newnode = create_node(&list, head);
-		if (!newnode)
-		{
-			exit(98);
-		}
-
-		numnodes++;
-		head = head->next;
-	}
-
-	free_ptrlink(list);
-	return (numnodes);
 }
 
 /**
@@ -54,7 +37,7 @@ int repeat_check(ptrlink *list, const listint_t *ptr_element)
 	while (list)
 
 	{
-		if (list->ptr == ptr_element)
+		if (list->ptr == (size_t)ptr_element)
 			return (1);
 
 		list = list->next;
@@ -80,7 +63,7 @@ ptrlink *create_node(ptrlink **list, const listint_t *ptr_element)
 	if (newnode)
 	{
 
-		newnode->ptr = ptr_element;
+		newnode->ptr = (size_t)ptr_element;
 
 		newnode->next = *list;
 
