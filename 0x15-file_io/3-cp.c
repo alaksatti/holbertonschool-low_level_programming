@@ -28,13 +28,15 @@ int main(int argc, char **argv)
 		write_error(argv[2]);
 
 
-	while ((rf = read(fd1, buffer, 1024)))
+	while (rf)
 	{
+		rf = read(fd1, buffer, 1024);
+
 		if (rf == -1)
 			read_error(argv[1]);
 
 		wf = write(fd2, buffer, rf);
-		if (wf != rf)
+		if (wf == -1)
 			write_error(argv[2]);
 	}
 
