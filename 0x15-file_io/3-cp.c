@@ -50,7 +50,7 @@ int main(int argc, char **argv)
 				exit(99);
 			}
 		}
-	} while(rf);
+	} while(rf > 0);
 
 	c1 = close(fd1);
 
