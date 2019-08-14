@@ -2,7 +2,7 @@
 
 
 /**
- * read_textfile - reads a text file and prints it to the POSIX standard output.
+ * read_textfile - reads a text file and prints it to the POSIX stdout.
  * @filename: filename.
  * @letters: the number of letter that should and printed.
  * Return: Actual number of letter it can actuallu read and print.
@@ -17,8 +17,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (!filename)
 		return (NULL);
 
-
-	fd = open(filename, O-RDONLY);
+	fd = open(filename, O_RDONLY);
 
 	if (fd == -1)
 		return (0);
@@ -33,7 +32,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (!rf)
 	{
-		free (buffer);
+		free(buffer);
 		return (0);
 	}
 
