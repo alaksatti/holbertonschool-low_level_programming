@@ -9,7 +9,7 @@
  * output file, 100 if cant closef iles, 0 on success.
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int fd1 = 0, fd2 = 0, rf = 0, wf = 0;
 	char buffer[1024];
