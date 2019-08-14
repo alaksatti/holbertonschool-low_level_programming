@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 			read_error(argv[1]);
 
 		wf = write(fd2, buffer, rf);
-		if (wf == -1)
+		if (wf != rf)
 			write_error(argv[2]);
 	}
 
