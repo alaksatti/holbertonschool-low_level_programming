@@ -9,7 +9,7 @@
  * output file, 100 if cant closef iles, 0 on success.
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	int fd1 = 0, fd2 = 0, rf = 0, wf = 0;
 	char buffer[1024];
@@ -50,21 +50,6 @@ int main(int argc, char *argv[])
 			argv[1]);
 		exit(98);
 	}
-	close_file_descriptor(fd1, fd2);
-	return (0);
-}
-
-/**
- * close_file_descriptor - closes fd.
- * @fd1: first file descriptor.
- * @fd2: second file descriptor.
- * Return: Exit 100 if failed.
- */
-
-
-void close_file_descriptor(int fd1, int fd2)
-{
-	int c1, c2;
 
 	c1 = close(fd1);
 	if (c1 == -1)
@@ -80,5 +65,7 @@ void close_file_descriptor(int fd1, int fd2)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 		exit(100);
 	}
+
+	return (0);
 
 }
