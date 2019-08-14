@@ -11,7 +11,8 @@
 
 int main(int argc, char **argv)
 {
-	int fd1 = 0, fd2 = 0, rf = 0, wf = 0, cd = 0;
+	int fd1 = 0, fd2 = 0, rf = 0, wf = 0;
+	char buffer[1024];
 
 	if (argc != 3)
 	{
