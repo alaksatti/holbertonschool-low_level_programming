@@ -27,8 +27,9 @@ int main(int argc, char **argv)
 	if (fd2 == -1)
 		write_error(argv[2]);
 
-	do {
-		rf = read(fd1, buffer, 1024);
+
+	while (rf = read(fd1, buffer, 1024))
+	{
 		if (rf == -1)
 			read_error(argv[1]);
 		if (rf)
@@ -37,7 +38,7 @@ int main(int argc, char **argv)
 			if (wf != rf)
 				write_error(argv[2]);
 		}
-	} while (rf);
+	}
 
 	c1 = close(fd1);
 
