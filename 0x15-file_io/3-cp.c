@@ -32,12 +32,10 @@ int main(int argc, char **argv)
 	{
 		if (rf == -1)
 			read_error(argv[1]);
-		if (rf)
-		{
-			wf = write(fd2, buffer, rf);
-			if (wf != rf)
-				write_error(argv[2]);
-		}
+
+		wf = write(fd2, buffer, rf);
+		if (wf != rf)
+			write_error(argv[2]);
 	}
 
 	c1 = close(fd1);
