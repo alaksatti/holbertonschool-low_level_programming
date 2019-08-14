@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 	rf = read(fd1, buffer, 1024);
-	if (rf)
+	while (rf)
 	{
 		wf = write(fd2, buffer, rf);
 		if (wf != rf)
@@ -44,7 +44,7 @@ int main(int argc, char **argv)
 			exit(99);
 		}
 	}
-	else
+	if (rf == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
 			argv[1]);
@@ -52,6 +52,7 @@ int main(int argc, char **argv)
 	}
 
 	c1 = close(fd1);
+
 	if (c1 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
