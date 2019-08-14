@@ -33,23 +33,26 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s", argv[2]);
 		exit(99);
 	}
-	rf = read(fd1, buffer, 1024);
-	while (rf)
-	{
-		wf = write(fd2, buffer, rf);
-		if (wf != rf)
+
+	do {
+		rf = read(fd1, buffer, 1024);
+		if (rf)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s",
-				argv[2]);
-			exit(99);
+			wf = write(fd2, buffer, rf);
+			if (wf != rf)
+			{
+				dprintf(STDERR_FILENO, "Error: Can't write to %s",
+					argv[2]);
+				exit(99);
+			}
 		}
-	}
-	if (rf == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
-			argv[1]);
-		exit(98);
-	}
+		if (rf == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
+				argv[1]);
+			exit(98);
+		}
+	} while(rf);
 
 	c1 = close(fd1);
 
