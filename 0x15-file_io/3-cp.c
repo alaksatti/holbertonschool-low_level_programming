@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 		write_error(argv[2]);
 
 
-	while (rf = read(fd1, buffer, 1024))
+	while ((rf = read(fd1, buffer, 1024)))
 	{
 		if (rf == -1)
 			read_error(argv[1]);
