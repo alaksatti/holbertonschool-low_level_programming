@@ -37,7 +37,7 @@ int main(int argc, char **argv)
 			if (wf != rf)
 				write_error(argv[2]);
 		}
-	} while(rf);
+	} while (rf);
 
 	c1 = close(fd1);
 
@@ -52,6 +52,11 @@ int main(int argc, char **argv)
 	return (0);
 
 }
+/**
+ * write_error - prints error to write message.
+ * @arg: file that failed to write.
+ * Return: exit 99.
+ */
 
 void write_error(char *arg)
 {
@@ -61,6 +66,12 @@ void write_error(char *arg)
 
 }
 
+/**
+ * read_error - prints error to read message.
+ * @arg: file that failed to read.
+ * Return: exit 98.
+ */
+
 void read_error(char *arg)
 {
 	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", arg);
@@ -69,6 +80,10 @@ void read_error(char *arg)
 
 }
 
+/**
+ * arg_error - error message for incorrect arguments.
+ * Return: exit 97.
+ */
 
 void arg_error(void)
 {
@@ -76,7 +91,11 @@ void arg_error(void)
 	exit(97);
 
 }
-
+/**
+ * closing_error - prints error message if cannot close fd properly.
+ * @fd: file description.
+ * Return: exit 100.
+ */
 
 void closing_error(int fd)
 {
