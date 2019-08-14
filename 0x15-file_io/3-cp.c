@@ -80,6 +80,6 @@ void arg_error(void)
 
 void closing_error(int fd)
 {
-	dprintf(STDERR_FILENO, "Can't close fd FD_VALUE\n");
+	dprintf(STDERR_FILENO, "Can't close fd %i\n", fd);
 	exit(100);
 }
