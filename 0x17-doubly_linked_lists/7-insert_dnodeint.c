@@ -37,7 +37,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 
 	if (!nodescanner || idx > 1)
+	{
 		return (NULL);
+		free(newnode);
+	}
 
 	newnode->next = nodescanner->next;
 	newnode->prev = nodescanner;
