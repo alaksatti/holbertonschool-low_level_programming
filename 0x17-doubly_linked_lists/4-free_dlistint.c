@@ -13,8 +13,8 @@ void free_dlistint(dlistint_t *head)
 	while (nodescanner)
 	{
 		free(nodescanner);
-                head = head->next;
-                nodescanner = head;
+		head = head->next;
+		nodescanner = head;
 	}
 
 
