@@ -41,10 +41,9 @@ void partition(int *arr, size_t size, int lower_limit, int limit)
 /**
  * sort - sorts an array according to quick sort algo
  * @arr: array
- * @pivot: index of pivot
- * @swap_index:
+ * @lower_limit: lower limit
+ * @limit: upper limit
  * @size: size of array
- * @new_size: size of unsorted array
  * Return: swap_index
  */
 int sort(int *arr, size_t size, int lower_limit, int limit)
@@ -70,8 +69,10 @@ int sort(int *arr, size_t size, int lower_limit, int limit)
 
 /**
  * swap - swaps two elements in an array.
- * a: first int to be swapped.
- * b: second element to be swapped.
+ * @a: first int to be swapped.
+ * @b: second element to be swapped.
+ * @arr: array.
+ * @size: size of array.
  * Return: nothing.
  */
 void swap(int *a, int *b, size_t size, int *arr)
