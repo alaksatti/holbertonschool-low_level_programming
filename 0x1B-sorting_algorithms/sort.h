@@ -19,15 +19,14 @@ typedef struct listint_s
 } listint_t;
 
 
-
-
-
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
+
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
+
 void shell_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
 void counting_sort(int *array, size_t size);
@@ -36,9 +35,15 @@ void heap_sort(int *array, size_t size);
 void radix_sort(int *array, size_t size);
 void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
+
+int get_max(int *array, size_t size);
+void partition(int *arr, size_t size, int lower_limit, int limit);
 int sort(int *arr, size_t size, int lower_limit, int limit);
 void swap(int *a, int *b, size_t size, int *arr);
-void partition(int *arr, size_t size, int lower_limit, int limit);
-void super_count_sort(int *arr, size_t size, size_t new_size, int has_zero);
+void super_count_sort(int *arry, size_t size, size_t new_size, int has_zero);
+void merge_recursive(int *array, int *temp, int l, int r);
+void merge(int *array, int *temp, int l, int m, int r);
+void bitonic_recursive(int *array, size_t now, size_t size, int low, int dir);
+void bitonic_merge(int *array, size_t now, size_t size, int low, int dir);
 
 #endif
