@@ -3,6 +3,7 @@
 
 
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * struct listint_s - Doubly linked list node
@@ -45,5 +46,7 @@ void merge_recursive(int *array, int *temp, int l, int r);
 void merge(int *array, int *temp, int l, int m, int r);
 void bitonic_recursive(int *array, size_t now, size_t size, int low, int dir);
 void bitonic_merge(int *array, size_t now, size_t size, int low, int dir);
-
+void quick_sort_hoare(int *array, size_t size);
+int sort_hoare(int *arr, size_t size, int lower_limit, int limit);
+void partition_hoare(int *arr, size_t size, int lower_limit, int limit);
 #endif
