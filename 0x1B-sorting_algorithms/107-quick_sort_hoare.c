@@ -11,7 +11,7 @@ void quick_sort_hoare(int *array, size_t size)
 {
 	int limit  = size - 1;
 
-	if (size < 2)
+	if (size < 2 || !array)
 		return;
 
 	partition_hoare(array, size, 0, limit);
@@ -67,7 +67,7 @@ int sort_hoare(int *arr, size_t size, int lower_limit, int limit)
 		} while (arr[limit] > pivot);
 
 
-		if (swap_index > limit)
+		if (swap_index != limit)
 			return (limit);
 
 
