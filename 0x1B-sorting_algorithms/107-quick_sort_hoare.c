@@ -1,5 +1,5 @@
 #include "sort.h"
-#include <stdio.h>
+
 
 /**
  * quick_sort - quick sort algo
@@ -56,9 +56,6 @@ int sort_hoare(int *arr, size_t size, int lower_limit, int limit)
 		do
 		{
 			swap_index++;
-/**
-			printf("swap_index %i \n", swap_index); 
-**/
 
 		} while(arr[swap_index] < pivot);
 
@@ -66,9 +63,6 @@ int sort_hoare(int *arr, size_t size, int lower_limit, int limit)
 		do
 		{
 			limit--;
-/**
-			printf("limit %i \n", limit);    
-**/
 
 		} while (arr[limit] > pivot);
 
