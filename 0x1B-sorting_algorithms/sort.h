@@ -49,4 +49,14 @@ void bitonic_merge(int *array, size_t now, size_t size, int low, int dir);
 void quick_sort_hoare(int *array, size_t size);
 int sort_hoare(int *arr, size_t size, int lower_limit, int limit);
 void partition_hoare(int *arr, size_t size, int lower_limit, int limit);
+void shakedown(int *arr, size_t start, size_t end, size_t size);
+void heapify_array(int *arr, size_t size);
+
+
+
+
+
+
+
+
 #endif
