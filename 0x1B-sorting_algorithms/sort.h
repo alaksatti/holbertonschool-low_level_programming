@@ -37,6 +37,8 @@ void radix_sort(int *array, size_t size);
 void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
 
+
+
 int get_max(int *array, size_t size);
 void partition(int *arr, size_t size, int lower_limit, int limit);
 int sort(int *arr, size_t size, int lower_limit, int limit);
@@ -46,14 +48,13 @@ void merge_recursive(int *array, int *temp, int l, int r);
 void merge(int *array, int *temp, int l, int m, int r);
 void bitonic_recursive(int *array, size_t now, size_t size, int low, int dir);
 void bitonic_merge(int *array, size_t now, size_t size, int low, int dir);
-void quick_sort_hoare(int *array, size_t size);
-int sort_hoare(int *arr, size_t size, int lower_limit, int limit);
 void partition_hoare(int *arr, size_t size, int lower_limit, int limit);
 void shakedown(int *arr, size_t start, size_t end, size_t size);
 void heapify_array(int *arr, size_t size);
 void forward_swap(listint_t **list, listint_t **end, listint_t **current);
 void backward_swap(listint_t **list, listint_t **end, listint_t **current);
-
+void bitonic_merge(int *array, size_t now, size_t size, int low, int dir);
+void bitonic_recursive(int *array, size_t now, size_t size, int low, int dir);
 
 
 
