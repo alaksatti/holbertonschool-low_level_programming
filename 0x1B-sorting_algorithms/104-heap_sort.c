@@ -25,7 +25,7 @@ void heap_sort(int *array, size_t size)
 }
 
 /**
- * heapify - turns the array into a heap
+ * heapify_array - turns the array into a heap
  * @arr: the array
  * @size: size of the array
  * Return: Nothing
@@ -46,7 +46,7 @@ void heapify_array(int *arr, size_t size)
 }
 
 /**
- * _siftdown - shift the values around based on the heap
+ * shakedown - shift the values around based on the heap
  * @arr: the array
  * @start: the start index
  * @end: the end index
