@@ -81,6 +81,8 @@ void shakedown(int *arr, size_t start, size_t end, size_t size)
  * swap - swaps to integers.
  * @a: fisr integer
  * @b: second integer
+ * @size: size of array
+ * @arr: array
  * Return: nothing
  */
 void swap(int *a, int *b, size_t size, int *arr)
@@ -92,5 +94,4 @@ void swap(int *a, int *b, size_t size, int *arr)
 	*b = tmp;
 
 	print_array(arr, size);
-
 }
