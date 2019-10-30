@@ -85,12 +85,12 @@ void shakedown(int *arr, size_t start, size_t end, size_t size)
  */
 void swap(int *a, int *b, size_t size, int *arr)
 {
-        int tmp;
+	int tmp;
 
-        tmp = *a;
-        *a = *b;
-        *b = tmp;
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 
-        print_array(arr, size);
+	print_array(arr, size);
 
 }

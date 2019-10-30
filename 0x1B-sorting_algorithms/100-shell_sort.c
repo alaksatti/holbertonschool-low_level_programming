@@ -41,12 +41,12 @@ void shell_sort(int *array, size_t size)
  */
 void swap(int *a, int *b, size_t size, int *arr)
 {
-        int tmp;
+	int tmp;
 
-        tmp = *a;
-        *a = *b;
-        *b = tmp;
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 
-        print_array(arr, size);
+	print_array(arr, size);
 
 }
