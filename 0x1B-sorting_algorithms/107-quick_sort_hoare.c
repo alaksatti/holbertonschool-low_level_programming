@@ -2,7 +2,7 @@
 
 
 /**
- * quick_sort - quick sort algo
+ * quick_sort_hoare - quick sort algo
  * @array: integer array
  * @size: size_t
  * Return: Nothing
@@ -18,7 +18,7 @@ void quick_sort_hoare(int *array, size_t size)
 }
 
 /**
- * partition - quick sort recursive
+ * partition_hoare - quick sort recursive
  * @arr: array
  * @size: size of array
  * @lower_limit: lower limit
@@ -39,7 +39,7 @@ void partition_hoare(int *arr, size_t size, int lower_limit, int limit)
 }
 
 /**
- * sort - sorts an array according to quick sort algo
+ * sort_hoare - sorts an array according to quick sort algo
  * @arr: array
  * @lower_limit: lower limit
  * @limit: upper limit
@@ -48,35 +48,26 @@ void partition_hoare(int *arr, size_t size, int lower_limit, int limit)
  */
 int sort_hoare(int *arr, size_t size, int lower_limit, int limit)
 {
-	int pivot = arr[limit], swap_index = lower_limit - 1;
-	limit += 1;
 
+	int pivot = arr[limit], swap_index = lower_limit - 1;
+
+	limit += 1;
 	while (1)
 	{
-		do
-		{
+		do {
 			swap_index++;
+		} while (arr[swap_index] < pivot);
 
-		} while(arr[swap_index] < pivot);
-
-
-		do
-		{
+		do {
 			limit--;
-
 		} while (arr[limit] > pivot);
 
-
-		if (swap_index >limit)
+		if (swap_index > limit)
 			return (limit);
-
 
 		if (swap_index != limit)
 			swap(&arr[swap_index], &arr[limit], size, arr);
-
 	}
-
-
 }
 
 
