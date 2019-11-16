@@ -1,0 +1,18 @@
+#Makefile using prev variables and rules with flags
+CC=gcc
+SRC=main.c holberton.c
+OBJ=$(SRC:%.c=%.o)
+NAME: holberton
+RM=rm
+CFLAGS=-Wall -Werror -Wextra -pedantic
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+oclean:
+	$(RM) -f $(OBJ)
+fclean: clean oclean
+
+clean:
+	$(RM) -f *~ $(NAME)
+
+re: oclean all

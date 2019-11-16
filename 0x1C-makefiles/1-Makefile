@@ -1,0 +1,7 @@
+#Makes holberton executable using CC and SRC
+
+CC=gcc
+SRC=main.c holberton.c
+
+all:
+	$(CC) $(SRC) -o holberton
