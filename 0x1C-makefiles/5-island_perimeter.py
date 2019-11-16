@@ -15,9 +15,8 @@ def island_perimeter(grid):
     for r in range(rows):
         for c in range(columns):
             if grid[r][c]:
-                partial = 4 - grid[r + 1] - grid[r - 1][c]
+                partial = 4 - grid[r + 1][c] - grid[r - 1][c]
                 partial -= (grid[r][c + 1] + grid[r][c - 1])
                 perimeter += partial
-            p += 1
 
     return perimeter
