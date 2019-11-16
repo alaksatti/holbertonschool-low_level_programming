@@ -1,4 +1,3 @@
-#makes holberton executable using NAME, OBJ, CC, SRC
 CC=gcc
 SRC=main.c holberton.c
 OBJ=$(SRC:%.c=%.o)
