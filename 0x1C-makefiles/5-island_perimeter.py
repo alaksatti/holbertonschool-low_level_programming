@@ -12,6 +12,8 @@ def island_perimeter(grid):
     rows = len(grid)
     perimeter = 0
 
-
+    for r in range(rows):
+        for c in range(columns):
+            p += 1
 
     return perimeter
