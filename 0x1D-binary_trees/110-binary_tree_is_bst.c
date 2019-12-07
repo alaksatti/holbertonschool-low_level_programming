@@ -19,7 +19,7 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 
 }
 /**
- * is_bst - helper function to check if tree is bst
+ * bst_checker - helper function to check if tree is bst
  * @tree: pointer to node
  * @min: min value
  * @max: max value
