@@ -19,7 +19,12 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 	return (check);
 
 }
-
+/**
+ * is_bst - helper function to check if tree is bst
+ * @tree: pointer to node
+ * @n: value
+ * Return: 1 if is 0 if not bst
+ */
 int is_bst(const binary_tree_t *tree, int n)
 {
 	if (tree->left)

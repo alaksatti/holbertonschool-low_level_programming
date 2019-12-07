@@ -38,10 +38,6 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 				return (1);
 	return (0);
 
-
-
-
-
 }
 /**
  * binary_tree_is_perfect - checks if a binary tree is perfect
@@ -51,17 +47,17 @@ int binary_tree_is_complete(const binary_tree_t *tree)
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-        if (!tree)
-                return (0);
-        if (!binary_tree_balance(tree))
-        {
-                if (!binary_tree_height(tree->left) &&
-                    !binary_tree_height(tree->right))
-                        return (1);
-                return (binary_tree_is_perfect(tree->left) &&
-                        binary_tree_is_perfect(tree->right));
-        }
-        return (0);
+	if (!tree)
+		return (0);
+	if (!binary_tree_balance(tree))
+	{
+		if (!binary_tree_height(tree->left) &&
+				!binary_tree_height(tree->right))
+			return (1);
+		return (binary_tree_is_perfect(tree->left) &&
+				binary_tree_is_perfect(tree->right));
+	}
+	return (0);
 
 }
 /**
@@ -73,18 +69,18 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 int binary_tree_balance(const binary_tree_t *tree)
 {
 
-        int right = 0, left = 0;
+	int right = 0, left = 0;
 
-        if (!tree)
-                return (0);
+	if (!tree)
+		return (0);
 
-        if (tree->left)
-                left = 1 + binary_tree_height(tree->left);
+	if (tree->left)
+		left = 1 + binary_tree_height(tree->left);
 
-        if (tree->right)
-                right = 1 + binary_tree_height(tree->right);
+	if (tree->right)
+		right = 1 + binary_tree_height(tree->right);
 
-        return (left - right);
+	return (left - right);
 
 
 }
@@ -95,23 +91,25 @@ int binary_tree_balance(const binary_tree_t *tree)
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-        size_t i = 0, j = 0;
+	size_t i = 0, j = 0;
 
 
-        if (!tree)
-                return (0);
+	if (!tree)
+		return (0);
 
-        if (!tree->left && !tree->right)
-                return (0);
+	if (!tree->left && !tree->right)
+		return (0);
 
-        i = binary_tree_height(tree->left);
+	i = binary_tree_height(tree->left);
 
-        j = binary_tree_height(tree->right);
+	j = binary_tree_height(tree->right);
 
-        if (i > j)
-                return (1 + i);
+	if (i > j)
+		return (1 + i);
 
-        else
-                return (1 + j);
+	else
+		return (1 + j);
 
 }
+
+
