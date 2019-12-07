@@ -8,13 +8,12 @@
  */
 int binary_tree_is_bst(const binary_tree_t *tree)
 {
-	int n, check = 0;
+	int check = 0;
 
 	if (!tree)
 		return (0);
 
-	n = INT_MIN;
-	check = is_bst(tree, n);
+	check = bst_checker(tree, INT_MIN, INT_MAX);
 
 	return (check);
 
@@ -22,21 +21,18 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 /**
  * is_bst - helper function to check if tree is bst
  * @tree: pointer to node
- * @n: value
+ * @min: min value
+ * @max: max value
  * Return: 1 if is 0 if not bst
  */
-int is_bst(const binary_tree_t *tree, int n)
+int bst_checker(const binary_tree_t *tree, int min, int max)
 {
-	if (tree->left)
-		if (!is_bst(tree->left, n))
-			return (0);
-	if (n < tree->n)
-		n  = tree->n;
-	else
+	if (!tree)
+		return (1);
+
+	if (tree->n > max || tree->n < min)
 		return (0);
 
-	if (tree->right)
-		if (!is_bst(tree->right, n))
-			return (0);
-	return (1);
+	return (bst_checker(tree->left, min, tree->n - 1) &&
+			bst_checker(tree->right, tree->n + 1, max));
 }
