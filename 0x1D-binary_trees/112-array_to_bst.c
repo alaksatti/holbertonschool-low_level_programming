@@ -8,12 +8,11 @@
  */
 bst_t *array_to_bst(int *array, size_t size)
 {
-	bst_t *root_node;
-	size_t i = 0;
+	bst_t *root_node = NULL;
+	size_t i;
 
 	if (!size)
 		return (NULL);
-
 	for (i = 0; i < size; i++)
 		bst_insert(&root_node, array[i]);
 
