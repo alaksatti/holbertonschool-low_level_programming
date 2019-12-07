@@ -19,7 +19,7 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 
 	balance = binary_tree_balance(tree);
 
-	if (balance)
+	if (balance == 1)
 	{
 		if (!tree->right || binary_tree_is_perfect(tree->right) == 1)
 			if (binary_tree_is_complete(tree->left) == 1)
@@ -29,7 +29,7 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 	}
 
 
-	else (balance == 0)
+	else if (balance == 0)
 	{
 		if (binary_tree_is_perfect(tree->left) == 1)
 			if (binary_tree_is_complete(tree->right) == 1)
@@ -113,5 +113,3 @@ size_t binary_tree_height(const binary_tree_t *tree)
 		return (1 + j);
 
 }
-
-
