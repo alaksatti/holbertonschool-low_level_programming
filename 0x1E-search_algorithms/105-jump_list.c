@@ -10,38 +10,57 @@
  */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	int jump = sqrt((int)size);
+	int jump = sqrt((int)size), jumper = jump;
 	listint_t *f = list, *pos = list;
 
 	if (!list)
 		return (NULL);
 
+	while (1)
+	{
+		f = pos;
+		pos = looper (pos, jumper);
+		printf("Value checked at index [%i] = [%i]\n",
+		       (int)pos->index, pos->n);
 
-	while (pos->next && pos->index < jump)
-		pos = pos->next;
+		if (pos->index == size - 1 || pos->n >= value)
+		{
+			printf("Value found between indexes [%i] and [%i]\n",
+			       (int)f->index, (int)pos->index);
+			break;
+		}
 
-	printf("Value checked at index [%lu] = [%d]\n", pos->index, pos->n);
+		f = pos;
+		jumper += jump;
 
-	if (pos->index == size - 1 || pos->n >= value)
-		printf("Value found between indexes [%lu] and [%lu]\n",
-		       f->index, pos->index);
+	}
+
+	while (f && f->index <= pos->index)
+	{
+
+		printf("Value checked at index [%i] = [%i]\n",
+		       (int)f->index, f->n);
 
 
+		if (f->n == value)
+			return (f);
+		f = f->next;
+	}
+
+	return (NULL);
 }
-
 /**
- * jump_loop - loops through linked list
+ *looper - loops through linked list
  * @list: linked list
- * @size: size of linked list
- * 
+ * @jump: steps to skip
+ * Return: list
  */
-listint_t *jump_loop(listint_t *list, size_t size, int value, int check)
+listint_t *looper(listint_t *list, int jump)
 {
-	i
+	 while (list->next && (int)list->index < jump)
+                        list = list->next;
 
 
 
-
-
-
+	 return (list);
 }
