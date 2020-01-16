@@ -12,13 +12,16 @@ int interpolation_search(int *array, size_t size, int value)
 {
 	size_t pos, s = 0, e = size - 1;
 
-	if (!array)
+	if (!array || !size)
 		return (-1);
 
 	while (s <= e && (int)e >= array[s] && (int)e >= array[e])
 	{
 		pos  = s + (((double)(e - s) / (array[e] - array[s])) *
 			    (value - array[s]));
+
+		if (s == e && array[e] == value)
+			return (e);
 
 		if (pos > e)
 		{
