@@ -15,7 +15,7 @@ int interpolation_search(int *array, size_t size, int value)
 	if (!array || !size)
 		return (-1);
 
-	while (s <= e && (int)e >= array[s] && (int)e >= array[e])
+	while (s <= e)
 	{
 		pos  = s + (((double)(e - s) / (array[e] - array[s])) *
 			    (value - array[s]));
