@@ -11,7 +11,7 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	size_t f = 0, l = size - 1, m = (size - 1) / 2;
 
-	if (!array)
+	if (!array || !size)
 		return (-1);
 
 
@@ -33,7 +33,7 @@ int binary_helper(int *array, size_t f, size_t l, size_t m, int value)
 {
 	print_array(array, f, l);
 
-	if (f == l)
+	if (f == l || f > l)
 		return (-1);
 
 	if (array[m] > value)
@@ -45,8 +45,10 @@ int binary_helper(int *array, size_t f, size_t l, size_t m, int value)
 	else if (array[m] == value && array[m - 1] == value)
 		return (binary_helper(array, f, m, (m) / 2, value));
 
-	else
+	else if (array[m] == value && array[m - 1] != value)
 		return (m);
+	else
+		return (-1);
 
 }
 /**
