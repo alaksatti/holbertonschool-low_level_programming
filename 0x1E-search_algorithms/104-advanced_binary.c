@@ -33,9 +33,15 @@ int binary_helper(int *array, size_t f, size_t l, size_t m, int value)
 {
 	print_array(array, f, l);
 
-	if (f > l || (f == l && (array[f] != value && array[l] != value)))
+	if (f >= l)
 		return (-1);
-
+	if (f == l - 1)
+	{
+		if (array[f] == value)
+			return (f);
+		if (array[l] == value)
+			return (l);
+	}
 	if (array[m] > value)
 		return (binary_helper(array, f, m - 1, (f + m - 1) / 2, value));
 
