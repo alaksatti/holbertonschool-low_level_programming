@@ -9,13 +9,13 @@
  */
 int advanced_binary(int *array, size_t size, int value)
 {
-	size_t f = 0, l = size - 1, m = (size - 1) / 2;
+	size_t f = 0, l = size - 1;
 
 	if (!array || !size)
 		return (-1);
 
 
-	return (binary_helper(array, f, l, m, value));
+	return (binary_helper(array, f, l, value));
 
 
 }
@@ -23,33 +23,28 @@ int advanced_binary(int *array, size_t size, int value)
  * binary_helper - helper function
  * @f: first index
  * @l: last index
- * @m: middle index
  * @array: pointer to array
  * @value: value to be searched
  * Return: None
  */
 
-int binary_helper(int *array, size_t f, size_t l, size_t m, int value)
+int binary_helper(int *array, size_t f, size_t l, int value)
 {
+	size_t m = (f + l) / 2;
+
+	if (f > l)
+		return (-1);
+
 	print_array(array, f, l);
 
-	if (f >= l)
-		return (-1);
-	if (f == l - 1)
-	{
-		if (array[f] == value)
-			return (f);
-		if (array[l] == value)
-			return (l);
-	}
 	if (array[m] > value)
-		return (binary_helper(array, f, m - 1, (f + m - 1) / 2, value));
+		return (binary_helper(array, f, m, value));
 
 	else if (array[m] < value)
-		return (binary_helper(array, m + 1, l, (m + 1 + l) / 2, value));
+		return (binary_helper(array, m + 1, l, value));
 
 	else if (array[m] == value && array[m - 1] == value)
-		return (binary_helper(array, f, m, (m) / 2, value));
+		return (binary_helper(array, f, m, value));
 
 	else
 		return (m);
