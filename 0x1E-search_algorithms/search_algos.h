@@ -54,7 +54,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value);
 
 void print_array(int *array, size_t f, size_t l);
 int binary_helper(int *array, size_t f, size_t l, int value);
-
+listint_t *looper(listint_t *list, int jump);
 
 
 
