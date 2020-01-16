@@ -60,4 +60,4 @@ int binary_helper(int *array, size_t f, size_t l, int value);
 
 
 
-#endif
+#endif /*SEARCH_ALGOS_*/
