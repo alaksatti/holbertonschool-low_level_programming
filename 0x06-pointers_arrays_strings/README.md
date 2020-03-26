@@ -65,4 +65,4 @@ What you should learn from this project:
 ---
 
 ## Author
-* **Aalaa Satti** - [alaksatti](https://github.com/alaksatti
+* **Aalaa Satti** - [alaksatti](https://github.com/alaksatti)
